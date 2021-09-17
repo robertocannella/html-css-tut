@@ -2,13 +2,15 @@
 
 :root {
   --color-primary: #2584ff;
-  --color-secondar: #00d9ff;
+  --color-secondary: #00d9ff;
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
 
-/* Typography */
+/* Typography 
+   ========================================================================== */
+
 html {
   /* Set font to 10pixels (from default of 16px */
   font-size: 62.5%;
@@ -40,6 +42,7 @@ h3 {
 p {
   margin-top: 0;
 }
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -55,7 +58,8 @@ p {
   }
 }
 
-/*  Links */
+/*  Links 
+   ========================================================================== */
 a {
   text-decoration: none;
 }
@@ -76,5 +80,38 @@ a {
 @media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
+  }
+}
+
+/* Badges
+   ========================================================================== */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+/* block element modifier - bem convention */
+
+.badge--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.badge--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.badge--sm {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--sm {
+    font-size: 1.2rem;
   }
 }
