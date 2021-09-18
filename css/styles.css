@@ -7,7 +7,11 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
-
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 /* Typography 
    ========================================================================== */
 
@@ -164,67 +168,69 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 /* Buttons
-   ========================================================================== */
+========================================================================== */
 .pill-btn {
-  border-radius: 20px;
+  border-radius: 40px;
   border: 0;
-  font-size: 2rem;
+  cursor: pointer;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin: 2px;
-  padding: 0.75rem 2rem;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 .pill-btn--primary {
-  border: 0;
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
 }
+/* TODO: use preprocessor to lighten LESS and SASS*/
 .pill-btn--primary:hover {
   background-color: #126de4;
 }
 .pill-btn--secondary {
-  border: 0;
   background: var(--color-secondary);
   color: white;
 }
+/* TODO: use preprocessor to lighten LESS and SASS*/
 .pill-btn--secondary:hover {
   background-color: #02cdf1;
 }
-
 .pill-btn--accent {
-  border: 0;
-  background-color: var(--color-accent);
-  color: white;
+  background: var(--color-accent);
+  color: #fff;
 }
+/* TODO: use preprocessor to lighten LESS and SASS ie:  lighten(primary, 10%) */
 .pill-btn--accent:hover {
-  background-color: #fb4d20;
+  background: #fb4d20;
 }
 .pill-btn--outline {
   border: 2px solid var(--color-headings);
-  background-color: transparent;
+  background-color: #fff;
   color: var(--color-headings);
 }
-
 .pill-btn--outline:hover {
   background-color: var(--color-headings);
-  color: white;
+  color: #fff;
 }
-
+/*  anchor elements are inline by default and will not accept block display hence: inline:block */
 .pill-btn--block {
-  border-radius: 40px;
-  display: block;
-  font-size: 1.8rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  display: inline-block;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .pill-btn {
     font-size: 1.5rem;
+    margin: 1rem 0;
   }
+}
+/* Anchors 
+========================================================================== */
+/* create margin for anchors as buttons*/
+.floating-link {
+  padding: 1rem 0;
+  display: inline-block;
 }
