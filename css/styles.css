@@ -327,6 +327,19 @@ a {
   margin-bottom: 2rem;
   letter-spacing: 1px;
 }
+.plan__popular .card__header {
+  position: relative;
+}
+.plan__popular .card__header::before {
+  content: url(../images/popular.svg);
+  /* Inline elements require inline-block to accept width attribute*/
+  width: 40px;
+  display: inline-block;
+  /* Set parent to relative positioning (.card__header) */
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
