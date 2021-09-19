@@ -354,3 +354,26 @@ a {
     font-size: 1.7rem;
   }
 }
+/* Media Objects
+========================================================================== */
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+.media__body {
+  /* 0 for vertical and 2rem for horizontal*/
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .media__title,
+  .media__body {
+    font-size: 1.8rem;
+  }
+}
