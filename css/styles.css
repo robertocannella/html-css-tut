@@ -320,11 +320,17 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+.card--primary .badge--primary{
+  background-color: #126de4;
+}
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 /* Plans
 ========================================================================== */
+.plan{
+  transition: .2s;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -667,7 +673,7 @@ a {
     align-self: center;
   }
 }
-/* Block Domain
+/*  Block Domain
 ========================================================================== */
 .block-domain .input-group{
   box-shadow: 0 0 30px 20px #e6ebee;
@@ -691,4 +697,32 @@ a {
   .block-domain__prices{
     grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
   }
+}
+/* Plans Blocks
+========================================================================== */
+.block-plans .grid {
+  gap: 4rem;
+  margin: 2rem;
+
+}
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:1024px) {
+  .plan:hover{
+    transform: scale(1.05);
+  }
+  .plan__popular{
+    transform: scale(1.1);
+    margin: 2rem 1rem;
+  }
+  .plan__popular:hover{
+    transform: scale(1.15);
+  }
+  .plan__popular .card{
+    box-shadow: 0 0 20px 20px #ced0d1;
+  }
+
 }
