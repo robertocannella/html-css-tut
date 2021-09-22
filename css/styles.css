@@ -724,5 +724,28 @@ a {
   .plan__popular .card{
     box-shadow: 0 0 20px 20px #ced0d1;
   }
+}
+/* Features
+========================================================================== */
 
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+.feature:first-of-type{
+  margin: 6rem 0;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+.feature__image {
+  width: 100%
+}
+@media screen and (min-width:768px) {
+  .feature__image{
+    width: 570px;
+  }
+  .feature:nth-of-type(odd) .feature__content {
+    order: 2;  /* cool trick to swap order of elements */
+  }
 }
